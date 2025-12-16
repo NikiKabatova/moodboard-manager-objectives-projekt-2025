@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nothing+You+Could+Do&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 425px;
+    height: 100vh;
+    max-height: 800px;
+    position: relative;
+    overflow: hidden; 
+    background-color: #f7f3ed;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.active-screen {
+    transform: translateX(0);
+    z-index: 10;
+}
+
+#screen1 {
+    background-image: url('images/hero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: 000;
+}
+
+#screen1 h1 {
+    font-family: "Nothing You Could Do", cursive;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0.3em;
+    margin-left: 0.2em;
+
+}
+
+#screen1 h2 {
+    font-weight: 400;
+    margin: 0;
+}
+
+.button {
+    padding: 18px 110px;
+    border: none;
+    background-color: #6A6360; 
+    color: #DDDCDA;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 180px;
+}
+
+
+
