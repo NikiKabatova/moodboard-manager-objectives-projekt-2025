@@ -11,11 +11,41 @@
 </head>
 <body>
     <div class="app-container">
-        <section id="screen1" class="screen active-screen">
+        <!-- <section id="screen1" class="screen active-screen">
             <div class="content-screen1">
                 <h1>Moodboard</h1>
                 <h2>manager</h2>
                 <button class="button" data-target="screen2">start</button>
+            </div>
+        </section> -->
+
+        <section id="screen2" class="screen hidden-screen">
+            <button class="close-button" data-target="screen1">×</button>
+            
+            <div class="content-screen2">
+                <h3>Choose your moodboard style</h3>
+                
+                <div class="moodboard-options">
+                    
+                    <div class="options-tile" data-target="screen3">
+                        <div class="tile-image tile-image-1">
+                            </div>
+                        <p>messy</p>
+                    </div>
+
+                    <div class="options-tile" data-target="screen4">
+                        <div class="tile-image tile-image-2">
+                            </div>
+                        <p>style tiles</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bottom-nav">
+                <div class="nav-dot active"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
             </div>
         </section>
     </div>

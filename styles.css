@@ -75,4 +75,123 @@ body {
 }
 
 
+#screen2, #screen3, #screen4 {
+    background-color: #f7f3ed; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0; 
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #6A6360;
+    padding: 5px;
+    z-index: 15;
+}
+
+.content-screen2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; 
+    padding-top: 50px;
+}
+
+#screen2 h3 {
+    margin-bottom: 50px;
+    margin-top: 40px;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #5d5c5a;
+}
+
+.moodboard-options {
+    width: 90%;
+    max-width: 300px; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.options-tile {
+    background-color: white;
+    border: 1px solid #e0dbd5; 
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.1s;
+}
+
+.options-tile:hover {
+    transform: translateY(-2px); 
+}
+
+.tile-image {
+    height: 150px; 
+    width: 100%;
+    background-color: #d1cbc3; 
+    background-size: cover;
+    background-position: center;
+}
+
+.options-tile p {
+    text-align: center;
+    color: #6A6360;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.tile-image {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+}
+
+.tile-image-1 {
+    background-image: url('images/messy-img.jpg'); 
+}
+
+.tile-image-2 {
+    background-image: url('images/style-tiles-img.jpg'); 
+}
+
+.bottom-nav {
+    width: 100%;
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #f7f3ed; 
+    padding-bottom: 10px;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nav-dot {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.nav-dot.active {
+    background-color: #5d5c5a; 
+}
+
 
