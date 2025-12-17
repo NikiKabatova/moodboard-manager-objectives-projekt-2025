@@ -11,13 +11,13 @@
 </head>
 <body>
     <div class="app-container">
-        <!-- <section id="screen1" class="screen active-screen">
+        <section id="screen1" class="screen active-screen">
             <div class="content-screen1">
                 <h1>Moodboard</h1>
                 <h2>manager</h2>
                 <button class="button" data-target="screen2">start</button>
             </div>
-        </section> -->
+        </section>
 
         <section id="screen2" class="screen hidden-screen">
             <button class="close-button" data-target="screen1">×</button>
@@ -51,6 +51,97 @@
                     <img class="icon icon-2" src="icons/export.png" alt="facebook logo"/>
                 </div>
             </div>
+        </section>
+        <section id="screen3" class="screen hidden-screen">
+            <button class="close-button" data-target="screen2">×</button>
+
+            <div class="gallery-wrapper">
+            <div class="overlay-ui">
+                <select id="fontSelector" class="lorem-select">
+                    <option value="Arial">LOREM IPSUM</option>
+                    <option value="Courier">LOREM IPSUM</option>
+                </select>
+            
+                <div class="color-palette">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+            <div class="main-grid">
+                <div class="box tall-left"></div>   
+                <div class="box empty"></div>
+                <div class="box square-mid square-mid-left"></div>
+                <div class="box square-mid square-mid-right"></div>  
+                <div class="box wide-bottom"></div> </div>
+            </div>
+            <div class="bottom-nav">
+                <div class="nav-icon">
+                    <img class="icon icon-1" src="icons/arrow-left.png" alt="facebook logo"/>
+                </div>
+                <div class="nav-icon">
+                    <img class="icon icon-2" src="icons/home.png" alt="facebook logo"/>
+                </div>
+                <div class="nav-icon">
+                    <img class="icon icon-2" src="icons/export.png" alt="facebook logo"/>
+                </div>
+            </div>
+        </section>
+        <section id="screen4" class="screen hidden-screen">
+            <button class="close-button" data-target="screen3">×</button>
+
+            <div class="frame-content">
+                <div class="main-hero-image"></div>
+                <div class="font-dropdown-section">
+                    <select class="lorem-select-v2">
+                        <option>LOREM IPSUM</option>
+                        <option>LOREM IPSUM</option>
+                </select>
+            </div>
+
+            <div class="icon-selector">
+                <div class="icon-option"></div>
+                <div class="icon-option"></div>
+                <div class="icon-option"></div>
+                <div class="icon-option"></div>
+            </div>
+
+            <div class="button-variants">
+                <button class="btn-variant dark">start</button>
+                <button class="btn-variant light">start</button>
+            </div>
+
+            <div class="palette-container">
+                <div class="color-box" data-index="0" style="--color: #CCDAD1; background-color: #CCDAD1;" onclick="this.classList.toggle('active')">
+                    <span class="hex-code">#CCDAD1</span>
+                    <input type="color" class="color-picker" value="#CCDAD1" title="Vybrat barvu posuvníkem">
+                    <input type="text" class="hex-input" value="CCDAD1" placeholder="HEX kód">
+                </div>
+
+                <div class="color-box" data-index="1" style="--color: #9CAEA9; background-color: #9CAEA9;" onclick="this.classList.toggle('active')">
+                    <span class="hex-code">#9CAEA9</span>
+                    <input type="color" class="color-picker" value="#9CAEA9" title="Vybrat barvu posuvníkem">
+                    <input type="text" class="hex-input" value="9CAEA9" placeholder="HEX kód">
+                </div>
+
+                <div class="color-box" data-index="2" style="--color: #788585; background-color: #788585;" onclick="this.classList.toggle('active')">
+                    <span class="hex-code">#788585</span>
+                    <input type="color" class="color-picker" value="#788585" title="Vybrat barvu posuvníkem">
+                    <input type="text" class="hex-input" value="788585" placeholder="HEX kód">
+                </div>
+            </div>
+
+            <div class="bottom-nav">
+                <div class="nav-icon">
+                    <img class="icon icon-1" src="icons/arrow-left.png" alt="facebook logo"/>
+                </div>
+                <div class="nav-icon">
+                    <img class="icon icon-2" src="icons/home.png" alt="facebook logo"/>
+                </div>
+                <div class="nav-icon">
+                    <img class="icon icon-2" src="icons/export.png" alt="facebook logo"/>
+                </div>
         </section>
     </div>
 </body>
