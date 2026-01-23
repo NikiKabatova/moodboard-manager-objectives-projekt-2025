@@ -58,25 +58,58 @@
             <button class="close-button" data-target="screen2">×</button>
 
             <div class="gallery-wrapper">
-            <div class="overlay-ui">
-                <select id="fontSelector" class="lorem-select">
-                    <option value="Arial">LOREM IPSUM</option>
-                    <option value="Courier">LOREM IPSUM</option>
-                </select>
-            
-                <div class="color-palette">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
-            </div>
+                <div class="overlay-ui">                
+                    <div class="fontpick" id="fontPick">
+                        <span class="fontpick__trigger"
+                              role="button"
+                              tabindex="0"
+                              aria-haspopup="listbox"
+                              aria-expanded="false">Choose font </span> 
 
-            <div class="main-grid">
-                <div class="box tall-left"></div>   
-                <div class="box empty"></div>
-                <div class="box square-mid square-mid-left"></div>
-                <div class="box square-mid square-mid-right"></div>  
-                <div class="box wide-bottom"></div> </div>
+                        <ul class="fontpick__menu" role="listbox">
+                          <li role="option" data-font='"Nothing You Could Do", cursive' style="font-family: Nothing You Could Do, cursive;">Lorem ipsum</li>
+                          <li role="option" data-font='"Montserrat", sans-serif' style="font-family: Montserrat, sans-serif;">Lorem ipsum</li>
+                          <li role="option" data-font='Georgia, serif' style="font-family: Georgia, serif;">Lorem ipsum</li>
+                        </ul>
+                    </div>
+                
+                    <div class="color-palette">
+                        <div class="color-box" data-index="0" style="--color: #CCDAD1; background-color: #CCDAD1;" onclick="this.classList.toggle('active')">
+                            <span class="hex-code">pick color</span>
+                            <input type="color" class="color-picker" value="#CCDAD1" title="Vybrat barvu posuvníkem">
+                            <input type="text" class="hex-input" value="CCDAD1" placeholder="HEX kód">
+                        </div>
+
+                        <div class="color-box" data-index="1" style="--color: #9CAEA9; background-color: #9CAEA9;" onclick="this.classList.toggle('active')">
+                            <span class="hex-code">pick color</span>
+                            <input type="color" class="color-picker" value="#9CAEA9" title="Vybrat barvu posuvníkem">
+                            <input type="text" class="hex-input" value="9CAEA9" placeholder="HEX kód">
+                        </div>
+
+                        <div class="color-box" data-index="2" style="--color: #788585; background-color: #788585;" onclick="this.classList.toggle('active')">
+                            <span class="hex-code">pick color</span>
+                            <input type="color" class="color-picker" value="#788585" title="Vybrat barvu posuvníkem">
+                            <input type="text" class="hex-input" value="788585" placeholder="HEX kód">
+                        </div>
+                    </div>
+                </div>
+            
+
+                <div class="main-grid">
+                    <div class="box tall-left">
+                        <span class="placeholder-text">Pick an image</span>
+                    </div>   
+                    <div class="box empty"></div>
+                    <div class="box square-mid square-mid-left">
+                        <span class="placeholder-text">Pick an image</span>
+                    </div>
+                    <div class="box square-mid square-mid-right">
+                        <span class="placeholder-text">Pick an image</span>
+                    </div>  
+                    <div class="box wide-bottom">
+                        <span class="placeholder-text">Pick an image</span>
+                    </div>
+                </div>
             </div>
             <div class="bottom-nav">
                 <div class="nav-icon">
@@ -88,14 +121,14 @@
                 <div class="nav-icon">
                     <img class="icon icon-3 export-button" src="icons/export.png" alt="export"/>
                 </div>
-            </div>   
+            </div> 
         </section>
         <section id="screen4" class="screen hidden-screen">
             <button class="close-button" data-target="screen2">×</button>
 
             <div class="frame-content">
                 <div class="main-hero-image" id="heroImageContainer">
-                    <span class="placeholder-text">Klikněte pro výběr obrázku</span>
+                    <span class="placeholder-text">Pick an image</span>
                 </div>
                 <div class="font-dropdown-section">
                     <select class="lorem-select-v2">
@@ -105,10 +138,10 @@
             </div>
 
             <div class="icon-selector">
-                <div class="icon-option"></div>
-                <div class="icon-option"></div>
-                <div class="icon-option"></div>
-                <div class="icon-option"></div>
+                <div class="icon-option icon-option-fb"></div>
+                <div class="icon-option icon-option-ig"></div>
+                <div class="icon-option icon-option-tt"></div>
+                <div class="icon-option icon-option-li"></div>
             </div>
 
             <div class="button-variants">
@@ -118,19 +151,19 @@
 
             <div class="palette-container">
                 <div class="color-box" data-index="0" style="--color: #CCDAD1; background-color: #CCDAD1;" onclick="this.classList.toggle('active')">
-                    <span class="hex-code">pick color</span>
+                    <span class="hex-code">pick a color</span>
                     <input type="color" class="color-picker" value="#CCDAD1" title="Vybrat barvu posuvníkem">
                     <input type="text" class="hex-input" value="CCDAD1" placeholder="HEX kód">
                 </div>
 
                 <div class="color-box" data-index="1" style="--color: #9CAEA9; background-color: #9CAEA9;" onclick="this.classList.toggle('active')">
-                    <span class="hex-code">pick color</span>
+                    <span class="hex-code">pick a color</span>
                     <input type="color" class="color-picker" value="#9CAEA9" title="Vybrat barvu posuvníkem">
                     <input type="text" class="hex-input" value="9CAEA9" placeholder="HEX kód">
                 </div>
 
                 <div class="color-box" data-index="2" style="--color: #788585; background-color: #788585;" onclick="this.classList.toggle('active')">
-                    <span class="hex-code">pick color</span>
+                    <span class="hex-code">pick a color</span>
                     <input type="color" class="color-picker" value="#788585" title="Vybrat barvu posuvníkem">
                     <input type="text" class="hex-input" value="788585" placeholder="HEX kód">
                 </div>

@@ -131,19 +131,22 @@ document.addEventListener('click', (e) => {
     const heroContainer = document.getElementById('heroImageContainer');
     const imageGroups = {
         '.tall-left': [ 
-            'images/style-tiles/fashion.jpg','images/style-tiles/product.jpg','images/style-tiles/surfer.jpg'
+            'images/messy/product-1.jpg','images/style-tiles/fashion.jpg','images/messy/life-style-1.jpg'
         ],
         '.square-mid-left': [ 
-            'images/style-tiles/fashion.jpg','images/style-tiles/product.jpg','images/style-tiles/surfer.jpg'
+            'images/messy/product-2.jpg','images/messy/fashion-1.jpg','images/messy/life-style-2.jpg'
         ],
         '.square-mid-right': [ 
-            'images/style-tiles/fashion.jpg','images/style-tiles/product.jpg','images/style-tiles/surfer.jpg'
+            'images/messy/product-3.png','images/messy/fashion-2.jpg','images/messy/life-style-3.jpg'
         ],
         '.wide-bottom': [
-            'images/style-tiles/fashion.jpg','images/style-tiles/product.jpg','images/style-tiles/surfer.jpg'
+            'images/style-tiles/product.jpg','images/messy/fashion-3.jpg','images/style-tiles/surfer.jpg'
         ],
         '.main-hero-image': [ 
-            'images/style-tiles/fashion.jpg','images/style-tiles/product.jpg','images/style-tiles/surfer.jpg'
+            'images/style-tiles/product.jpg','images/style-tiles/fashion.jpg','images/style-tiles/surfer.jpg'
+        ],
+        '.icon-option-fb': [ 
+            'images/icon-option/fb-1.png','images/icon-option/fb-2.png','images/icon-option/fb-3.png'
         ]
     };
 
@@ -188,3 +191,34 @@ document.addEventListener('click', (e) => {
         const picker = document.getElementById('dynamic-image-picker');
         if (picker && !picker.contains(e.target)) picker.remove();
     });
+
+    const root = document.getElementById('fontPick');
+  const trigger = root.querySelector('.fontpick__trigger');
+  const menu = root.querySelector('.fontpick__menu');
+
+  const setOpen = (open) => {
+    root.classList.toggle('open', open);
+    trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  };
+
+  const toggle = () => setOpen(!root.classList.contains('open'));
+
+  trigger.addEventListener('click', toggle);
+  trigger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    if (e.key === 'Escape') setOpen(false);
+  });
+
+  menu.addEventListener('click', (e) => {
+    const item = e.target.closest('[role="option"]');
+    if (!item) return;
+    const font = item.dataset.font;
+
+    trigger.textContent = item.textContent;
+    trigger.style.fontFamily = font;
+    setOpen(false);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!root.contains(e.target)) setOpen(false);
+  });
